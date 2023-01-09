@@ -1,0 +1,63 @@
+﻿<html>
+  <meta http-equiv="=Content-Type" content="text/html"; charset="UTF-8"/>
+    <style type="text/css">
+        body {background-color:white;}
+        p {color:blue;}
+        th, td {
+            border-style:solid;
+            border-color: #96D4D4;
+            }
+        </style>
+  <script>
+    function formSubmit()
+    {
+      var inpStr=document.getElementById("in_cmd").value;
+      alert(inpStr);
+      inpStr = inpStr.replace(/\u3002\s*$/, "");  //remove last chinese period 。
+      inpStr = inpStr.replaceAll(' ', ''); // remove all spaces
+      // var LastChar=inStr.substring(inpStr.length - 1,1);
+      // if(LastChar.includes("。", 1))
+      // str = str.substring(0, str.length - 1);
+      var newUrl="http://127.0.0.1:8000/?channel="+ encodeURI(inpStr);
+      // alert(newUrl);
+
+      // alert(newUrl);
+      window.location.href=newUrl
+      document.getElementById("in_cmd").value=newUrl;
+    }
+  </script>
+<title>HomePage-AHKhttp</title>
+
+<body>
+<b>Hello World</b><p>
+<!-- <a href="ahkrun:https://www.baidu.com/">baidu</a> -->
+<form action="/action_page.php">
+  <label for="lname">Voice Command</label><br>
+  <input type="text" id="in_cmd" name="lname" width="300" height="128"><br><br>
+  <input type="button" value="Submit" onclick="formSubmit()">
+</form> 
+<table>
+  <tr>
+    <td><a href="?channel=cctv1" id="cctv1"><img src="CCTV-1.png" alt="CCTV-1" width="128" height="128"></a></td>
+    <td><a href="?channel=cctv2"><img src="CCTV-2.png" alt="CCTV-2" width="128" height="128"></a></td>
+    <td><a href="?channel=cctv3"><img src="CCTV-3.png" alt="CCTV-3" width="128" height="128"></a></td>
+    <td><a href="?channel=cctv4"><img src="CCTV-4.png" alt="CCTV-4" width="128" height="128"></a></td>
+    <td><a href="?channel=cctv5"><img src="CCTV-5.png" alt="CCTV-5" width="128" height="128"></a></td>
+    <td><a href="?channel=cctv5plus"><img src="CCTV-5+.png" alt="CCTV-5+" width="128" height="128"></a></td>
+    <td><a href="?channel=cctv6"><img src="CCTV-6.png" alt="CCTV-6" width="128" height="128"></a></td>
+    <td><a href="?channel=cctv7"><img src="CCTV-7.png" alt="CCTV-7" width="128" height="128"></a></td>
+  </tr>
+    <tr>
+      <td><a href="?channel=cctv8"><img src="CCTV-8.png" alt="CCTV-8" width="128" height="128"></a></td>
+      <td><a href="?channel=cctv9"><img src="CCTV-9.png" alt="CCTV-9" width="128" height="128"></a></td>
+      <td><a href="?channel=cctv10"><img src="CCTV-10.png" alt="CCTV-10" width="128" height="128"></a></td>
+      <td><a href="?channel=cctv11"><img src="CCTV-11.png" alt="CCTV-11" width="128" height="128"></a></td>
+      <td><a href="?channel=cctv12"><img src="CCTV-12.png" alt="CCTV-12" width="128" height="128"></a></td>
+      <td><a href="?channel=cctv13"><img src="CCTV-13.png" alt="CCTV-13" width="128" height="128"></a></td>
+      <td><a href="?channel=cctv14"><img src="CCTV-14.png" alt="CCTV-14" width="128" height="128"></a></td>
+      <td><a href="?channel=cctv15"><img src="CCTV-15.png" alt="CCTV-15" width="128" height="128"></a></td>
+      <td><a href="?channel=cctv17"><img src="CCTV-17.png" alt="CCTV-17" width="128" height="128"></a></td>
+    </tr>
+  </table>  
+</body>
+</html>
